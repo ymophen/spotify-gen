@@ -1,4 +1,4 @@
-mport requests
+import requests
 import random
 from colorama import Fore
 import os
