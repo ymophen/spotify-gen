@@ -1,4 +1,4 @@
-import requests
+mport requests
 import random
 from colorama import Fore
 import os
@@ -29,11 +29,12 @@ headers = {
 def random_char(char_num):
        return ''.join(random.choice(string.ascii_letters) for _ in range(char_num))
 
+# Yes i fucked my mind 3 hrs trying to figure out how can i do it and i failed and i raged over my keyboard :D
 def mainfunction():
     global made
     while True:
         try:
-            Email = random_char(10)+"@protonmail.com"
+            Email = random_char(10)+"@icloud.com"
             password = random_char(20)
             payload = f'birth_day=2&birth_month=02&birth_year=1989&collect_personal_info=undefined&creation_flow=&creation_point=https%3A%2F%2Fwww.spotify.com%2Fus%2F&displayname=DreamyOnTop&gender=male&iagree=1&key=a1e486e2729f46d6bb368d6b2bcda326&platform=www&referrer=&send-email=0&thirdpartyemail=1&email={Email}&password={password}&password_repeat={password}'
             response = requests.request("POST", url, headers=headers, data=payload)
@@ -52,7 +53,7 @@ thread = threading.Thread(target=title)
 thread.start()
 
 def start():
-    for i in range(100): # If you increase might make your pc crash or wont work at all, so keep it at 100
+    for i in range(100): 
         try:
             threading.Thread(target=mainfunction, args=(), daemon=True).start()
         except Exception as e:
