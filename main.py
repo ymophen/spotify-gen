@@ -34,7 +34,7 @@ def mainfunction():
     global made
     while True:
         try:
-            Email = random_char(10)+"@icloud.com"
+            Email = random_char(10)+"@protonmail.com"
             password = random_char(20)
             payload = f'birth_day=2&birth_month=02&birth_year=1989&collect_personal_info=undefined&creation_flow=&creation_point=https%3A%2F%2Fwww.spotify.com%2Fus%2F&displayname=DreamyOnTop&gender=male&iagree=1&key=a1e486e2729f46d6bb368d6b2bcda326&platform=www&referrer=&send-email=0&thirdpartyemail=1&email={Email}&password={password}&password_repeat={password}'
             response = requests.request("POST", url, headers=headers, data=payload)
